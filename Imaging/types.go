@@ -1,8 +1,8 @@
 package Imaging
 
 import (
-	"github.com/larryhu/goonvif/xsd"
-	"github.com/larryhu/goonvif/xsd/onvif"
+	"github.com/r2d2-ai/goonvif/xsd"
+	"github.com/r2d2-ai/goonvif/xsd/onvif"
 )
 
 type GetServiceCapabilities struct {

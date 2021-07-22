@@ -8,7 +8,7 @@ Goonvif is an implementation of the ONVIF protocol for managing IP cameras.
 ## Install
 
 ```
-go get github.com/larryhu/goonvif
+go get github.com/r2d2-ai/goonvif
 ```
 
 ## Features

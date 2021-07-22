@@ -9,14 +9,14 @@ import (
 	"strings"
 
 	"github.com/beevik/etree"
-	"github.com/larryhu/goonvif"
-	"github.com/larryhu/goonvif/device"
-	"github.com/larryhu/goonvif/discover"
+	"github.com/r2d2-ai/goonvif"
+	device "github.com/r2d2-ai/goonvif/Device"
+	"github.com/r2d2-ai/goonvif/discover"
 )
 
 func main() {
 
-	// client()
+	client()
 	// runDiscovery("en0")
 	s, err := goonvif.GetAvailableDevicesAtSpecificEthernetInterface("en0")
 	if err != nil {
@@ -26,11 +26,11 @@ func main() {
 }
 
 func client() {
-	dev, err := goonvif.NewDevice("192.168.3.10")
+	dev, err := goonvif.NewDevice("192.168.50.195:8080")
 	if err != nil {
 		panic(err)
 	}
-	dev.Authenticate("admin", "zsyy12345")
+	dev.Authenticate("admin", "P$r0l4MeaCAM")
 
 	log.Printf("output %+v", dev.GetServices())
 

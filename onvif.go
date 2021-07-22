@@ -11,10 +11,10 @@ import (
 	"strings"
 
 	"github.com/beevik/etree"
-	Device "github.com/larryhu/goonvif/device"
-	"github.com/larryhu/goonvif/discover"
-	"github.com/larryhu/goonvif/networking"
-	"github.com/larryhu/goonvif/soap"
+	"github.com/r2d2-ai/goonvif/Device"
+	"github.com/r2d2-ai/goonvif/discover"
+	"github.com/r2d2-ai/goonvif/networking"
+	"github.com/r2d2-ai/goonvif/soap"
 )
 
 // Xlmns xlmns
@@ -203,11 +203,7 @@ func (dev device) CallMethod(method interface{}) (*http.Response, error) {
 
 	var endpoint string
 	switch pkg {
-	case "Device":
-	case "Event":
-	case "Imaging":
-	case "Media":
-	case "PTZ":
+	case "Device", "Event", "Imaging", "Media", "PTZ":
 		endpoint = dev.endpoints[pkg]
 	default:
 		return nil, fmt.Errorf("Endpoint not found [%s]", pkg)
